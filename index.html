@@ -19,5 +19,64 @@
 
 
 <script>
-  
+
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = 448
+  canvas.height = 400
+
+  let counter = 0
+
+  //variables de la bola
+  const ballRdius = 4
+
+  let x = canvas.width / 2
+  let y = canvas.height - 30
+  //velocidad de la pelota
+  let dx = 2
+  let dy = -2
+
+  function drawBall(){
+    ctx.beginPath()
+    ctx.arc(x, y, ballRdius, 0, Math.PI * 2)
+  }
+
+  function drawPaddle(){
+
+  }
+
+  function drawBricks(){
+
+  }
+
+  function collisionDetection(){
+
+  }
+
+  function ballMovement(){
+
+  }
+
+  function paddleMovement(){
+
+  }
+
+  function draw() {
+    //los elementos para dibujar
+    drawBall()
+    drawPaddle()
+    drawBricks()
+
+    //colisiones y movimientos
+    collisionDetection()
+    ballMovement()
+    paddleMovement()
+
+   window.requestAnimationFrame(draw)
+
+  }
+
+  draw()
+
 </script>
